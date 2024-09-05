@@ -17,7 +17,7 @@ const Main = () => {
       <img
         src="/bg-image.png"
         alt="bg-image"
-        className="z-0 absolute right-20 top-0 max-h-[550px] w-max"
+        className="z-0 absolute right-20 top-0 h-full lg:h-[600px] w-max"
       />
       <img
         src="/bg-cars.png"

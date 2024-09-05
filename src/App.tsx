@@ -1,6 +1,8 @@
+import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import Header from "./components/Header";
 import Main from "./components/Main";
+import Seo from "./components/Seo";
 
 function App() {
   return (
@@ -8,6 +10,8 @@ function App() {
       <Header />
       <Main />
       <Gallery />
+      <Seo />
+      <Footer />
     </div>
   );
 }
