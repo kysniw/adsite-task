@@ -3,10 +3,12 @@ import Title from "./ui/Title";
 
 const Main = () => {
   return (
-    <main className="z-0 min-h-screen relative w-full pt-20 px-28 overflow-hidden">
+    <main className="z-0 min-h-screen relative w-full pt-20 px-6 lg:px-28 overflow-hidden">
       <div className="z-10 relative mt-20 flex flex-col gap-12">
-        <Title className="w-1/2">Sprzedajemy samochody z&nbsp;Europy</Title>
-        <p className="w-1/3">
+        <Title className="w-full lg:w-1/2">
+          Sprzedajemy samochody z&nbsp;Europy
+        </Title>
+        <p className="w-full lg:w-1/3">
           Kup komfortowy pojazd, aby każda podróż była wyjątkowym przeżyciem.
         </p>
         <div className="flex gap-6">
@@ -17,12 +19,12 @@ const Main = () => {
       <img
         src="/bg-image.png"
         alt="bg-image"
-        className="z-0 absolute right-20 top-0 h-full lg:h-[600px] w-max"
+        className="z-0 absolute right-20 top-0 h-full min-w-fit lg:h-[600px]"
       />
       <img
         src="/bg-cars.png"
         alt="bg-cars"
-        className="z-0 absolute right-0 bottom-20 w-2/3 max-w-[900px]"
+        className="z-0 absolute right-0 bottom-20 w-full lg:w-2/3 max-w-[900px]"
       />
     </main>
   );

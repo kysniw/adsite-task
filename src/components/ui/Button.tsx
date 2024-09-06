@@ -18,7 +18,8 @@ const Button = ({
 
   return (
     <button
-      className={`rounded-lg px-6 py-3 border font-semibold border-primary ${variantClass} ${className}`}
+      className={`rounded-lg px-6 py-3 border font-semibold border-primary duration-300
+         hover:shadow-md hover:shadow-gray-400 ${variantClass} ${className}`}
       {...props}
     >
       {children}
