@@ -8,7 +8,7 @@ const Main = ({ setModalOpen }: { setModalOpen: () => void }) => {
         <Title size="xl" className="w-full lg:w-1/2">
           Sprzedajemy samochody z&nbsp;Europy
         </Title>
-        <p className="w-full md:w-1/3">
+        <p className="w-full md:w-1/3 font-roboto-condensed ">
           Kup komfortowy pojazd, aby każda podróż była wyjątkowym przeżyciem.
         </p>
         <div className="flex flex-col xs:flex-row justify-center sm:justify-normal gap-4 sm:gap-6">

@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin");
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -18,5 +20,16 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".rotate-y-full": {
+          transform: "rotateY(360deg)",
+        },
+        ".-rotate-y-full": {
+          transform: "rotateY(-360deg)",
+        },
+      });
+    }),
+  ],
 };
