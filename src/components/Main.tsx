@@ -1,19 +1,23 @@
 import Button from "./ui/Button";
 import Title from "./ui/Title";
 
-const Main = () => {
+const Main = ({ setModalOpen }: { setModalOpen: () => void }) => {
   return (
-    <main className="z-0 min-h-screen relative w-full pt-20 px-6 lg:px-28 overflow-hidden">
+    <main className="z-0 min-h-screen relative w-full pt-10 md:pt-20 px-6 lg:px-28 overflow-hidden">
       <div className="z-10 relative mt-20 flex flex-col gap-12">
-        <Title className="w-full lg:w-1/2">
+        <Title size="xl" className="w-full lg:w-1/2">
           Sprzedajemy samochody z&nbsp;Europy
         </Title>
-        <p className="w-full lg:w-1/3">
+        <p className="w-full md:w-1/3">
           Kup komfortowy pojazd, aby każda podróż była wyjątkowym przeżyciem.
         </p>
-        <div className="flex gap-6">
-          <Button>Zobacz zdjęcia</Button>
-          <Button variant="bordered">Zadzwoń do nas</Button>
+        <div className="flex flex-col xs:flex-row justify-center sm:justify-normal gap-4 sm:gap-6">
+          <Button>
+            <a href="#gallery">Zobacz zdjęcia</a>
+          </Button>
+          <Button variant="bordered" onClick={setModalOpen}>
+            Zadzwoń do nas
+          </Button>
         </div>
       </div>
       <img

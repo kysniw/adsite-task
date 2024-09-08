@@ -13,6 +13,9 @@ export default {
         "roboto-condensed": ["Roboto Condensed", "sans-serif"],
         bebas: ["Bebas Neue", "sans-serif"],
       },
+      screens: {
+        xs: "400px",
+      },
     },
   },
   plugins: [],

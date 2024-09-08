@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "filled" | "bordered";
+  variant?: "filled" | "bordered" | "custom";
 }
 
 const Button = ({
@@ -11,17 +11,18 @@ const Button = ({
   className,
   ...props
 }: ButtonProps) => {
-  const variantClass = classNames({
-    "bg-primary text-secondary": variant === "filled",
-    "bg-secondary text-primary": variant === "bordered",
-  });
+  const cn = classNames(
+    `rounded-lg px-6 py-3 border font-semibold border-primary duration-300
+    hover:shadow-md hover:shadow-gray-400`,
+    {
+      "bg-primary text-secondary": variant === "filled",
+      "bg-secondary text-primary": variant === "bordered",
+    },
+    className
+  );
 
   return (
-    <button
-      className={`rounded-lg px-6 py-3 border font-semibold border-primary duration-300
-         hover:shadow-md hover:shadow-gray-400 ${variantClass} ${className}`}
-      {...props}
-    >
+    <button className={variant === "custom" ? className : cn} {...props}>
       {children}
     </button>
   );

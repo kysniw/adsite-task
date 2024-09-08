@@ -6,12 +6,18 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Title from "./ui/Title";
+import Link from "./ui/Link";
 
 const Gallery = () => {
   return (
-    <section id="gallery" className="min-h-screen w-full px-6 lg:px-28">
-      <div>
-        <Title className="text-xl">Zobacz naszą galerię zdjęć</Title>
+    <section id="gallery" className="min-h-screen w-full px-6 lg:px-28 py-20">
+      <div className="">
+        <h2 className="text-primary">Prezentacja firmy</h2>
+        <Title className="text">Zobacz naszą galerię zdjęć</Title>
+        <nav className="mt-10 flex gap-6">
+          <Link active>Samochody osobowe</Link>
+          <Link>Samochody dostawcze</Link>
+        </nav>
       </div>
       <Swiper
         modules={[Navigation, Pagination]}

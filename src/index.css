@@ -5,10 +5,10 @@
 @tailwind utilities;
 
 @layer base {
-  * {
+  /* * {
     margin: 0;
     box-sizing: border-box;
-  }
+  } */
 
   html {
     font-family: "Roboto Flex", sans-serif;

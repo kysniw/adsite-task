@@ -1,12 +1,25 @@
+import classNames from "classnames";
 import React from "react";
+
+interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  active?: boolean;
+}
 
 const Link = ({
   children,
   className,
   href,
-}: React.LinkHTMLAttributes<HTMLLinkElement>) => {
+  active = false,
+  ...props
+}: LinkProps) => {
+  const cn = classNames(
+    "cursor-pointer duration-300 hover:text-primary",
+    { "border-b-2 border-primary text-primary font-semibold": active },
+    className
+  );
+
   return (
-    <a href={href} className={className}>
+    <a href={href} className={cn} {...props}>
       {children}
     </a>
   );
