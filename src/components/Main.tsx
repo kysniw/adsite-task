@@ -21,12 +21,12 @@ const Main = ({ setModalOpen }: { setModalOpen: () => void }) => {
         </div>
       </div>
       <img
-        src="/bg-image.png"
+        src="./bg-image.png"
         alt="bg-image"
         className="z-0 absolute right-20 top-0 h-full min-w-fit lg:h-[600px]"
       />
       <img
-        src="/bg-cars.png"
+        src="./bg-cars.png"
         alt="bg-cars"
         className="z-0 absolute right-0 bottom-20 w-full lg:w-2/3 max-w-[900px]"
       />
