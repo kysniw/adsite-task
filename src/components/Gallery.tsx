@@ -37,7 +37,7 @@ const Gallery = () => {
       >
         {photosData.map((photo) => {
           return (
-            <SwiperSlide key={photo.id} className={`py-20 max-w-max`}>
+            <SwiperSlide key={photo.id} className={`py-20 max-w-[500px]`}>
               <img
                 src={photo.imageUrl}
                 alt={photo.imageAlt}

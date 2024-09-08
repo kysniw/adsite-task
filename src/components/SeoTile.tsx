@@ -1,10 +1,18 @@
 import { FaArrowDown } from "react-icons/fa6";
 import Button from "./ui/Button";
 import Title from "./ui/Title";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const SeoTile = () => {
   const [isRolled, setIsRolled] = useState(true);
+
+  const paragraphRef = useRef<HTMLParagraphElement>(null);
+
+  if (isRolled) {
+    if (paragraphRef && paragraphRef.current) {
+      paragraphRef.current.scrollTo(0, 0);
+    }
+  }
 
   return (
     <div>
@@ -13,6 +21,7 @@ const SeoTile = () => {
         commodo.
       </Title>
       <p
+        ref={paragraphRef}
         className={`relative my-6 font-roboto-condensed duration-500 ${
           isRolled ? "max-h-24 overflow-hidden" : "max-h-80 overflow-auto"
         }`}
@@ -35,7 +44,7 @@ const SeoTile = () => {
         ullam ducimus officiis? Dignissimos culpa voluptatem harum sit quibusdam
         dolor laudantium magni error rerum assumenda.
         {isRolled && (
-          <span className="absolute bottom-0 right-0 bg-dark pr-10">
+          <span className="absolute bottom-0 right-0 bg-dark pl-2 pr-10">
             {"[...]"}
           </span>
         )}
