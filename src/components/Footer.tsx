@@ -1,4 +1,5 @@
 import Link from "./ui/Link";
+import Tooltip from "./ui/Tooltip";
 
 const Footer = () => {
   return (
@@ -7,8 +8,11 @@ const Footer = () => {
     border-t-2 border-secondary font-roboto-condensed"
     >
       <h2 className="font-semibold">CarsSpot</h2>
-      <Link href="#" className="underline">
+      <Link className="underline relative group" inactive>
         Polityka prywatności
+        <Tooltip color="primary" position="top">
+          Dostępne wkrótce
+        </Tooltip>
       </Link>
     </footer>
   );

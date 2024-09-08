@@ -1,6 +1,7 @@
 import MobileMenu from "./MobileMenu";
 import Button from "./ui/Button";
 import Link from "./ui/Link";
+import Tooltip from "./ui/Tooltip";
 
 const Header = ({ setModalOpen }: { setModalOpen: () => void }) => {
   return (
@@ -17,7 +18,10 @@ const Header = ({ setModalOpen }: { setModalOpen: () => void }) => {
       </div>
       <div className="hidden md:flex gap-6">
         <Link href="#gallery">Galeria zdjęć</Link>
-        <Link href="#">FaQ</Link>
+        <Link href="#" inactive className="relative group">
+          FaQ
+          <Tooltip>Dostępne wkrótce</Tooltip>
+        </Link>
       </div>
       <Button className="hidden md:block" onClick={setModalOpen}>
         Zadzwoń do nas

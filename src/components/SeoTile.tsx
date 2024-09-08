@@ -13,7 +13,7 @@ const SeoTile = () => {
         commodo.
       </Title>
       <p
-        className={`my-6 font-roboto-condensed duration-500 ${
+        className={`relative my-6 font-roboto-condensed duration-500 ${
           isRolled ? "max-h-24 overflow-hidden" : "max-h-80 overflow-auto"
         }`}
       >
@@ -34,6 +34,11 @@ const SeoTile = () => {
         voluptatibus modi debitis quam earum esse neque illo, ex incidunt fugiat
         ullam ducimus officiis? Dignissimos culpa voluptatem harum sit quibusdam
         dolor laudantium magni error rerum assumenda.
+        {isRolled && (
+          <span className="absolute bottom-0 right-0 bg-dark pr-10">
+            {"[...]"}
+          </span>
+        )}
       </p>
       <Button
         variant="custom"
